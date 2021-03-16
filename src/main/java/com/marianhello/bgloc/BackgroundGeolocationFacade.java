@@ -222,6 +222,7 @@ public class BackgroundGeolocationFacade {
                 // watch location mode changes
                 registerLocationModeChangeReceiver();
                 registerServiceBroadcast();
+                mDelegate.onAuthorizationChanged(getAuthorizationStatus());
                 startBackgroundService();
             }
 
